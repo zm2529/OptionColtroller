@@ -12,6 +12,10 @@
 		9877202E1B43CFEF00EAA0AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9877202D1B43CFEF00EAA0AA /* Images.xcassets */; };
 		987720311B43CFEF00EAA0AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9877202F1B43CFEF00EAA0AA /* LaunchScreen.xib */; };
 		9877203D1B43CFEF00EAA0AA /* OptionColtrollerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9877203C1B43CFEF00EAA0AA /* OptionColtrollerTests.m */; };
+		987720481B43D00000EAA0AA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987720471B43D00000EAA0AA /* MainViewController.m */; };
+		9877204D1B43D00B00EAA0AA /* zmTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9877204C1B43D00B00EAA0AA /* zmTools.m */; };
+		987720521B44CD6500EAA0AA /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 987720511B44CD6500EAA0AA /* 1.png */; };
+		987720561B44CEA600EAA0AA /* OptionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 987720551B44CEA600EAA0AA /* OptionControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,14 @@
 		987720361B43CFEF00EAA0AA /* OptionColtrollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionColtrollerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9877203B1B43CFEF00EAA0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9877203C1B43CFEF00EAA0AA /* OptionColtrollerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionColtrollerTests.m; sourceTree = "<group>"; };
+		987720461B43D00000EAA0AA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		987720471B43D00000EAA0AA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9877204A1B43D00B00EAA0AA /* zmDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmDefine.h; sourceTree = "<group>"; };
+		9877204B1B43D00B00EAA0AA /* zmTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmTools.h; sourceTree = "<group>"; };
+		9877204C1B43D00B00EAA0AA /* zmTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zmTools.m; sourceTree = "<group>"; };
+		987720511B44CD6500EAA0AA /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		987720541B44CEA600EAA0AA /* OptionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionControl.h; sourceTree = "<group>"; };
+		987720551B44CEA600EAA0AA /* OptionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +88,12 @@
 		987720251B43CFEF00EAA0AA /* OptionColtroller */ = {
 			isa = PBXGroup;
 			children = (
+				987720491B43D00B00EAA0AA /* zmDefine */,
 				9877202A1B43CFEF00EAA0AA /* AppDelegate.h */,
 				9877202B1B43CFEF00EAA0AA /* AppDelegate.m */,
+				987720461B43D00000EAA0AA /* MainViewController.h */,
+				987720471B43D00000EAA0AA /* MainViewController.m */,
+				987720531B44CE8F00EAA0AA /* Segment_Option */,
 				9877202D1B43CFEF00EAA0AA /* Images.xcassets */,
 				9877202F1B43CFEF00EAA0AA /* LaunchScreen.xib */,
 				987720261B43CFEF00EAA0AA /* Supporting Files */,
@@ -88,6 +104,7 @@
 		987720261B43CFEF00EAA0AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				987720511B44CD6500EAA0AA /* 1.png */,
 				987720271B43CFEF00EAA0AA /* Info.plist */,
 				987720281B43CFEF00EAA0AA /* main.m */,
 			);
@@ -109,6 +126,26 @@
 				9877203B1B43CFEF00EAA0AA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		987720491B43D00B00EAA0AA /* zmDefine */ = {
+			isa = PBXGroup;
+			children = (
+				9877204A1B43D00B00EAA0AA /* zmDefine.h */,
+				9877204B1B43D00B00EAA0AA /* zmTools.h */,
+				9877204C1B43D00B00EAA0AA /* zmTools.m */,
+			);
+			name = zmDefine;
+			path = ../../../../../zmDefine;
+			sourceTree = "<group>";
+		};
+		987720531B44CE8F00EAA0AA /* Segment_Option */ = {
+			isa = PBXGroup;
+			children = (
+				987720541B44CEA600EAA0AA /* OptionControl.h */,
+				987720551B44CEA600EAA0AA /* OptionControl.m */,
+			);
+			path = Segment_Option;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987720311B43CFEF00EAA0AA /* LaunchScreen.xib in Resources */,
+				987720521B44CD6500EAA0AA /* 1.png in Resources */,
 				9877202E1B43CFEF00EAA0AA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9877204D1B43D00B00EAA0AA /* zmTools.m in Sources */,
 				9877202C1B43CFEF00EAA0AA /* AppDelegate.m in Sources */,
+				987720561B44CEA600EAA0AA /* OptionControl.m in Sources */,
+				987720481B43D00000EAA0AA /* MainViewController.m in Sources */,
 				987720291B43CFEF00EAA0AA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,13 +294,17 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -275,11 +320,26 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -297,13 +357,17 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -313,11 +377,26 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -332,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OptionColtroller/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -342,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OptionColtroller/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
