@@ -37,7 +37,7 @@
     
     self.optionControl = [[OptionControl alloc] initWithItems:@[@"a", @"b", @"c", @"d"]];
     self.optionControl.frame = CGRectMake(0, 100, SCREEN_WIDTH, 100);
-    [self.optionControl addTarget:self action:@selector(optionControlAction:) forControlEvents:UIControlEventEditingChanged];
+    [self.optionControl addTarget:self action:@selector(optionControlAction:) forControlEvents:UIControlEventValueChanged];
     self.optionControl.tintColor = [UIColor yellowColor];
     [self.optionControl setWidth:10.f forSegmentAtIndex:2];
     [self.optionControl setTitleTextAttributes:@{

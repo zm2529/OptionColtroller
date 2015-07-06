@@ -21,12 +21,32 @@
 
 @property (nonatomic, assign) CGFloat normalWidth;//正常宽度
 
-@property (nonatomic ,assign) SEL changeAction;//UIControlEventValueChanged action
-@property (nonatomic, assign) id changeTarget;//UIControlEventValueChanged Target
+@property (nonatomic, strong) UIImageView *imgViewBottomSeparator;
+
+@property (nonatomic, assign, getter=isShowBottomSeparator) BOOL showBottomSeparator;
 
 @end
 
 @implementation OptionControl
+
+- (id)initWithItems:(NSArray *)items
+ andSelectLineColor:(UIColor *)color
+andselectLineHeight:(CGFloat)height
+andIsShowBottomSeparator:(BOOL)showBottomSeparator
+{
+    self = [self initWithItems:items];
+    if (self) {
+        self.selectLineColor = color;
+        self.selectLineHeight = height;
+        
+        self.showBottomSeparator = showBottomSeparator;
+        
+        if (self.isShowBottomSeparator) {
+            self.imgViewBottomSeparator.hidden = NO;
+        }
+    }
+    return self;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -48,6 +68,10 @@
 
 - (void)createUI
 {
+    self.showBottomSeparator = NO;
+    
+    self.clipsToBounds = NO;
+    
     [self setDividerImage:[zmTools imageWithColor:[UIColor clearColor] andSize:CGSizeMake(1.f, 1.f)]
       forLeftSegmentState:UIControlStateNormal
         rightSegmentState:UIControlStateNormal
@@ -55,6 +79,10 @@
     [self setBackgroundImage:[zmTools imageWithColor:[UIColor clearColor] andSize:CGSizeMake(1.f, 1.f)]
                     forState:UIControlStateNormal
                   barMetrics:UIBarMetricsDefault];
+    
+    self.imgViewBottomSeparator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+    self.imgViewBottomSeparator.hidden = YES;
+    [self addSubview:self.imgViewBottomSeparator];
     
     [self addTarget:self action:@selector(changeSelectIndex:) forControlEvents:UIControlEventValueChanged];
     
@@ -66,23 +94,9 @@
 - (void)changeSelectIndex:(UISegmentedControl *)segmentedControl
 {
     self.selectedSegmentIndex = segmentedControl.selectedSegmentIndex;
-    
-    [self sendAction:self.changeAction to:self.changeTarget forEvent:nil];
 }
 
 #pragma mark - override
-- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
-{
-    if (controlEvents == UIControlEventEditingChanged) {
-        if (target == self) {
-            [super addTarget:target action:action forControlEvents:controlEvents];
-        }
-        else{
-            self.changeAction = action;
-        }
-    }
-    [super addTarget:target action:action forControlEvents:controlEvents];
-}
 
 - (void)setWidth:(CGFloat)width forSegmentAtIndex:(NSUInteger)segment
 {
@@ -149,6 +163,8 @@
         
         [self refresh];
     }
+    
+    self.imgViewBottomSeparator.frame = CGRectMake(0, CGRectGetHeight(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.imgViewBottomSeparator.frame));
 }
 
 - (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex
@@ -198,7 +214,7 @@
                              selectLineFrame.origin.x = moveTox;
                              selectLineFrame.size.width = [self getItemWidthAtIndex:index];
                              self.selectLine.frame = selectLineFrame;
-                             zmLog_Frame(selectLineFrame);
+                             //                             zmLog_Frame(selectLineFrame);
                          }];
     }
     else{
