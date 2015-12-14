@@ -56,6 +56,10 @@
     buttont.backgroundColor = [UIColor purpleColor];
     [buttont addTarget:self action:@selector(buttontActionUp) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttont];
+    
+    NSLog(@"%@", NSStringFromCGRect(button.frame));
+    zmLog_Frame(button.frame);
+    zmLog_Size(button.frame.size)
 }
 
 - (void)buttonActionUp
